@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://17bh8eurbrfc"]
+
+[ext_resource type="Script" uid="uid://ba3lwj4xdcs2n" path="res://Scrips/player.gd" id="1_4flbx"]
+
+[node name="Player" type="Node3D" unique_id=2090456670]
+script = ExtResource("1_4flbx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1391193131]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1211230098]
+light_color = Color(0.91261595, 0.9723789, 0.85443646, 1)
+light_energy = 2.728
+light_size = 7.41

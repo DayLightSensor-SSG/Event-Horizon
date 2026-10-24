@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://d1h1lert6cbxd"]
+
+[ext_resource type="Script" uid="uid://cvtsov8ngaueg" path="res://Scrips/RoomNode.gd" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://17bh8eurbrfc" path="res://player.tscn" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://8fm8l34pwjm" path="res://Textures/Minecraft_missing_texture_block.svg.webp" id="2_feb5d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feb5d"]
+albedo_texture = ExtResource("2_feb5d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shu7q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wp68m"]
+size = Vector3(0.4, 1, 0.4)
+
+[node name="Game" type="Node3D" unique_id=1458722085]
+
+[node name="Player" parent="." unique_id=2090456670 instance=ExtResource("2_e2o6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Level" type="Node3D" parent="." unique_id=1163976390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level" unique_id=1269439481]
+material_override = SubResource("StandardMaterial3D_feb5d")
+size = Vector3(3, 1, 9)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=2142372055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7171922, 0, 0)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=666629150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.682808, 0, 0)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1767706419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7171922, 0, 3.5)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=402595033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.682808, 0, 3.5)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=487922302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7171922, 0, -3.5)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=782330484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.682808, 0, -3.5)
+size = Vector3(4, 1, 2)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1771064311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19999999, 0)
+operation = 2
+size = Vector3(2, 1, 8)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=625157905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.19999999, 0)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1344264594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.19999999, 3.513673)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1301688214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.19999999, 3.513673)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=78614622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.19999999, 0.013673067)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1562236302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.19999999, -3.486327)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Level/CSGBox3D" unique_id=1482990645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.19999999, -3.486327)
+operation = 2
+size = Vector3(3, 1, 1)
+
+[node name="X1" type="Marker3D" parent="Level" unique_id=780341477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.3, -3.5)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X1" unique_id=218933315]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X2" type="Marker3D" parent="Level" unique_id=592273558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -3.3999999)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X2" unique_id=1923494282]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X3" type="Marker3D" parent="Level" unique_id=1111802914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0.3, -3.6)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X3" unique_id=1877943429]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X4" type="Marker3D" parent="Level" unique_id=824619526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 2.3841858e-07)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X4" unique_id=168130791]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X5" type="Marker3D" parent="Level" unique_id=1839275173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.3, 0.10000014)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X5" unique_id=1759962609]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X6" type="Marker3D" parent="Level" unique_id=597651677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0.3, -0.19999981)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X6" unique_id=493560658]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X7" type="Marker3D" parent="Level" unique_id=1846060685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 3.5)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X7" unique_id=1366615867]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X8" type="Marker3D" parent="Level" unique_id=1489745455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0.3, 3.6000004)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X8" unique_id=1790815179]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
+
+[node name="X9" type="Marker3D" parent="Level" unique_id=55781598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2000003, 0.3, 3.8000002)
+script = ExtResource("1_80nbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/X9" unique_id=1606654755]
+material_override = SubResource("StandardMaterial3D_shu7q")
+mesh = SubResource("BoxMesh_wp68m")
